@@ -1,10 +1,10 @@
-SRC = main.cpp 
+SRC = main.cpp  
 
 NAME = Template_functions
 
 CC = c++
 
-HEADER =  whatever.hpp
+HEADER =  iter.hpp 
 
 FLAG =  -Wall -Wextra -Werror -std=c++98
 
