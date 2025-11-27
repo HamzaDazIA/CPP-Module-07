@@ -49,6 +49,8 @@ Array<T>::Array(const Array &obj)
 template <typename T>
 Array<T>& Array<T>::operator=(const Array &obj)
 {
+    if (this == &obj)
+        return *this;
     delete[] arry;
     this->arry = new T[obj.i];
     this->i = obj.i;
@@ -77,6 +79,7 @@ T& Array<T>::operator[](unsigned int index)
 
 
 template <typename T>
+
 const char * Array<T>::FIALDINDEX::what() const throw()
 {
     return("index is out of bounds");
@@ -88,4 +91,5 @@ unsigned int Array<T>::size() const
 {
     return i;
 }
+
 #endif
